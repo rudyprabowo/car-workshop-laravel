@@ -13,13 +13,11 @@ Bla bla
 
 ## Entity Relationship Diagram
 
-![Entity Relationship Diagram for car-workshop application]
-(https://github.com/rudyprabowo/car-workshop-laravel/blob/main/ERD%20Car%20Workshop.png)
+![Entity Relationship Diagram for car-workshop application](https://github.com/rudyprabowo/car-workshop-laravel/blob/main/ERD%20Car%20Workshop.png)
 
 ## State Machine Diagram
 
-![Entity Relationship Diagram for car-workshop application]
-(https://github.com/rudyprabowo/car-workshop-laravel/blob/main/Car%20Workshop%20State%20Machine%20Diagram.jpg)
+![Entity Relationship Diagram for car-workshop application](https://github.com/rudyprabowo/car-workshop-laravel/blob/main/Car%20Workshop%20State%20Machine%20Diagram.jpg)
 
 ## About Laravel
 
