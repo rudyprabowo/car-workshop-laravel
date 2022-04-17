@@ -9,7 +9,37 @@
 
 ## How to run car-workshop application
 
-Bla bla
+### Pertama, lakukan clone aplikasi car-workshop
+
+Gunakan `git clone https://github.com/rudyprabowo/car-workshop-laravel.git` atau bisa dengan mendownload zip aplikasi ini.
+
+### Kedua, install dependency aplikasi
+
+Gunakan `composer install` untuk menginstal dependency yang digunakan oleh aplikasi.
+
+### Ketiga, buat atau ubah file `.env`
+
+Buat atau ubah file `.env` agar sesuai dengan settinga database yang dimiliki.
+
+### Keempat, buat database
+
+Buat database yang datanya sudah di sesuaikan dengan data pada file `.env`.
+
+### Kelima, lakukan perintah migrasi database
+
+Gunakan `php artisan migrate` untuk menjalankan perintah migrasi database.
+
+### Keenam, lakukan perintah seeder database
+
+Gunakan `php artisan db:seed` untuk menjalankan perintah seeder database.
+
+### Terakhir, jalankan aplikasi
+
+Gunakan `php artisan serve` untuk menjalankan aplikasi.
+
+## Postman Collection link
+
+Postman collection link dapat di akses di `https://www.postman.com/gold-spaceship-719355/workspace/car-workshop/collection/16924922-af7b1ad8-f941-4641-b046-454c11b1465c?action=share&creator=16924922`
 
 ## Entity Relationship Diagram
 
