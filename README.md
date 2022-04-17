@@ -7,6 +7,20 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## How to run car-workshop application
+
+Bla bla
+
+## Entity Relationship Diagram
+
+![Entity Relationship Diagram for car-workshop application]
+(https://github.com/rudyprabowo/car-workshop-laravel/blob/main/ERD%20Car%20Workshop.png)
+
+## State Machine Diagram
+
+![Entity Relationship Diagram for car-workshop application]
+(https://github.com/rudyprabowo/car-workshop-laravel/blob/main/Car%20Workshop%20State%20Machine%20Diagram.jpg)
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
