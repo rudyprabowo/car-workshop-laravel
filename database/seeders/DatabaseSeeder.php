@@ -64,72 +64,7 @@ class DatabaseSeeder extends Seeder
             'service_price' => '250000'
         ]);
 
-        // //Create list Service
-        // ListService::create([
-        //     'service_name' => 'Ganti Cat Mobil',
-        //     'service_price' => '300000'
-        // ]);
-        // ListService::create([
-        //     'service_name' => 'Ganti Ban Mobil',
-        //     'service_price' => '100000'
-        // ]);
-        // ListService::create([
-        //     'service_name' => 'Ganti Kaca Mobil',
-        //     'service_price' => '200000'
-        // ]);
-        // ListService::create([
-        //     'service_name' => 'Ganti Oli Mobil',
-        //     'service_price' => '80000'
-        // ]);
-
-        // ListService::create([
-        //     'service_name' => 'Ganti Kursi Mobil',
-        //     'service_price' => '250000'
-        // ]);
-        // //Create list Service
-        // ListService::create([
-        //     'service_name' => 'Ganti Cat Mobil',
-        //     'service_price' => '300000'
-        // ]);
-        // ListService::create([
-        //     'service_name' => 'Ganti Ban Mobil',
-        //     'service_price' => '100000'
-        // ]);
-        // ListService::create([
-        //     'service_name' => 'Ganti Kaca Mobil',
-        //     'service_price' => '200000'
-        // ]);
-        // ListService::create([
-        //     'service_name' => 'Ganti Oli Mobil',
-        //     'service_price' => '80000'
-        // ]);
-
-        // ListService::create([
-        //     'service_name' => 'Ganti Kursi Mobil',
-        //     'service_price' => '250000'
-        // ]);
-        // //Create list Service
-        // ListService::create([
-        //     'service_name' => 'Ganti Cat Mobil',
-        //     'service_price' => '300000'
-        // ]);
-        // ListService::create([
-        //     'service_name' => 'Ganti Ban Mobil',
-        //     'service_price' => '100000'
-        // ]);
-        // ListService::create([
-        //     'service_name' => 'Ganti Kaca Mobil',
-        //     'service_price' => '200000'
-        // ]);
-        // ListService::create([
-        //     'service_name' => 'Ganti Oli Mobil',
-        //     'service_price' => '80000'
-        // ]);
-
-        // ListService::create([
-        //     'service_name' => 'Ganti Kursi Mobil',
-        //     'service_price' => '250000'
-        // ]);
+        
 
         // //Create random service list services
         \App\Models\ServiceListServices::factory(30)->create();

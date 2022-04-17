@@ -18,8 +18,8 @@ class ServiceController extends Controller
         // $this->middleware('auth:api');
         // $this->user = $this->guard()->user();
         
-        $this->user = Auth::user();
-        $this->user = auth()->user();
+        // $this->user = Auth::user();
+        // $this->user = Auth::guard()->user();
     }
 
     /**
@@ -30,23 +30,19 @@ class ServiceController extends Controller
     //GET
     public function index()
     {
-        // return Service::all();
-        return $this->user;
+        $this->user = Auth::user();
+        // return $this->user;
 
+        if ($this->user->account == "customer" || $this->user->account == "mechanic") {
+            // $services = $this->user->services()->get(['id', 'car_name', 'car_plate_number', 'car_in_workshop', 'service_status', 'customer_id', 'mechanic_id']);
+            $services = $this->user->services()->get();
+            return response()->json($services->toArray());
+        } else {
+            $services = Service::all();
+            return response()->json($services->toArray());
+        }
 
-        // if ($this->user->account == "customer" || $this->user->account == "mechanic") {
-        //     // $services = $this->user->services()->get(['id', 'car_name', 'car_plate_number', 'car_in_workshop', 'service_status', 'customer_id', 'mechanic_id']);
-        //     $services = $this->user->services()->get();
-        //     return response()->json($services->toArray());
-        // } else {
-        //     $services = Service::all();
-        //     return response()->json($services->toArray());
-        // }
-
-        // $services = $this->user->services->get();
-        // $services = $this->user->services()->get();
-        // $services = $this->user->services();
-        // return $this->user->account; //untuk keluarkan value account dari login user
+        return $this->user->account; //untuk keluarkan value account dari login user
     }
 
     /**
@@ -58,6 +54,7 @@ class ServiceController extends Controller
     //PUSH
     public function store(Request $request)
     {
+        
         $validator = Validator::make($request->all(), [
             'car_name' => 'required|string',
             'car_plate_number' => 'required|string',
@@ -79,7 +76,10 @@ class ServiceController extends Controller
         $service->customer_id = $request->customer_id;
         $service->mechanic_id = $request->mechanic_id;
 
-        if ($this->user->serviceUsers()->save($service)) {
+        $this->user = Auth::user();
+
+        // if ($this->user->serviceUsers()->save($service)) {
+        if ($this->user->services()->save($service)) {
             return response()->json([
                 'status' => true,
                 'service' => $service
@@ -146,7 +146,9 @@ class ServiceController extends Controller
         $service->customer_id = $request->customer_id;
         $service->mechanic_id = $request->mechanic_id;
 
-        if ($this->user->serviceUsers()->save($service)) {
+        $this->user = Auth::user();
+
+        if ($this->user->services()->save($service)) {
             return response()->json([
                 'status' => true,
                 'service' => $service
@@ -168,6 +170,8 @@ class ServiceController extends Controller
     //DELETE
     public function destroy(Service $service)
     {
+        $this->user = Auth::user();
+
         if ($service->delete()) {
             return response()->json([
                 'status' => true,

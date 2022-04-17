@@ -31,7 +31,6 @@ class AuthController extends Controller
         $token_validity = 24 * 60;
 
         // $this->guard()->factory()->setTTL($token_validity);
-        // Auth::guard()->factory()->setTTL($token_validity);
         Auth::factory()->setTTL($token_validity);
 
         if(!Auth::attempt($request->only('email','password','account'))){
@@ -40,21 +39,9 @@ class AuthController extends Controller
             return response()->json(['error' => 'Unauthorized'], 401);
         }
 
-        //added to cookies
-        // $cookie = cookie('jwt', $token, 60*24);
-        
-        
-        
-        // return response([
-            //     'message' => 'Success'
-        // ])->withCookie($cookie);
-
         // return $this->respondWithToken($token); //slinya
         // return $this->respondWithToken($token)->withCookie($cookie); //add cookies
         $user = Auth::user();
-
-        //tes set user
-        //auth()->setUser($user);
 
         //token
         $token = $user->createToken('token')->plainTextToken;
@@ -64,8 +51,14 @@ class AuthController extends Controller
 
 
         return  response([
-            'message' => 'Login Success. '.$token
+            'message' => 'Login Success. ',
+            'token'=> $token
         ])->withCookie($cookie);
+    }
+
+    public function tes(){
+        $this->user = Auth::user();
+        return $this->user;
     }
 
     public function register(Request $request)
@@ -98,10 +91,10 @@ class AuthController extends Controller
         
         // $this->guard()->logout();
         // Auth::guard()->logout();
+        // Auth::logout();
 
 
         return response()->json(['message' => 'User loged out successfully.'])->withCookie($cookie);
-        // return response()->json(['message' => 'User loggeg out successfully.']);
     }
 
     public function profile()
