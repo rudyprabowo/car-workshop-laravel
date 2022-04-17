@@ -39,7 +39,7 @@ Gunakan `php artisan serve` untuk menjalankan aplikasi.
 
 ## Postman Collection link
 
-Postman collection link dapat di akses di `https://www.postman.com/gold-spaceship-719355/workspace/car-workshop/collection/16924922-af7b1ad8-f941-4641-b046-454c11b1465c?action=share&creator=16924922`
+Postman collection link dapat di akses di [Postman Link](https://www.postman.com/gold-spaceship-719355/workspace/car-workshop/collection/16924922-af7b1ad8-f941-4641-b046-454c11b1465c?action=share&creator=16924922)
 
 ## Entity Relationship Diagram
 
